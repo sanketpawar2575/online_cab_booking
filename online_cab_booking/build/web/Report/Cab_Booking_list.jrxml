@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cab_Booking_list" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13f4f134-f9f3-454c-a00f-9fc785fc9f7d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     user_cab_booking.`id` AS user_cab_booking_id,
+     user_cab_booking.`Full_name` AS user_cab_booking_Full_name,
+     user_cab_booking.`contact_no` AS user_cab_booking_contact_no,
+     user_cab_booking.`pickup_point` AS user_cab_booking_pickup_point,
+     user_cab_booking.`drop_point` AS user_cab_booking_drop_point,
+     user_cab_booking.`kilo_meter` AS user_cab_booking_kilo_meter,
+     user_cab_booking.`No_of_passenger` AS user_cab_booking_No_of_passenger,
+     user_cab_booking.`booking_date` AS user_cab_booking_booking_date,
+     user_cab_booking.`booking_time` AS user_cab_booking_booking_time,
+     user_cab_booking.`pakage` AS user_cab_booking_pakage,
+     user_cab_booking.`pincode` AS user_cab_booking_pincode,
+     user_cab_booking.`user_id` AS user_cab_booking_user_id,
+     user_cab_booking.`driver_id` AS user_cab_booking_driver_id,
+     user_cab_booking.`driver_name` AS user_cab_booking_driver_name
+FROM
+     `user_cab_booking` user_cab_booking]]>
+	</queryString>
+	<field name="user_cab_booking_id" class="java.lang.Integer"/>
+	<field name="user_cab_booking_Full_name" class="java.lang.String"/>
+	<field name="user_cab_booking_contact_no" class="java.lang.String"/>
+	<field name="user_cab_booking_pickup_point" class="java.lang.String"/>
+	<field name="user_cab_booking_drop_point" class="java.lang.String"/>
+	<field name="user_cab_booking_booking_date" class="java.lang.String"/>
+	<field name="user_cab_booking_booking_time" class="java.lang.String"/>
+	<field name="user_cab_booking_pakage" class="java.lang.String"/>
+	<field name="user_cab_booking_user_id" class="java.lang.String"/>
+	<group name="user_cab_booking_id">
+		<groupExpression><![CDATA[$F{user_cab_booking_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<staticText>
+				<reportElement x="294" y="80" width="255" height="38" uuid="2659d08d-7184-4fb0-9d37-602ab5d410a8"/>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Journey  List]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="11" width="359" height="59" uuid="ac44454f-1540-4814-8bd7-279070234d61"/>
+				<textElement>
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Online Cab Booking]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="14" width="802" height="1" uuid="255b7fb7-48e6-4e65-abe0-15134005a8c5"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="89" height="20" uuid="847a3aff-578c-4638-83f6-04f7d02d4eb7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="0" width="89" height="20" uuid="ab2082fe-e7bb-4ad3-a7f1-56b852095209"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="0" width="89" height="20" uuid="d0ff8dd4-2011-4c1f-9167-c0c2e02fbb70"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="0" width="89" height="20" uuid="79f09321-3772-401e-84e3-150f6bb27e53"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pick Point]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="0" width="89" height="20" uuid="2b0b9956-34ad-4d8c-9a0e-5e991b0f052b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Drop Point]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="0" width="89" height="20" uuid="ea6fb04b-a0e4-4353-9008-981fdbd1c64b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="0" width="89" height="20" uuid="7d93066f-6ee4-42ed-8e59-e09e4cc7d891"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="623" y="0" width="89" height="20" uuid="a7450519-9758-4b9d-9de1-512fccbdf4bc"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Package]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="0" width="89" height="20" uuid="a19a53a5-ff5e-45d9-b76b-1d585c9b2108"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User ID]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="802" height="1" uuid="2b93e41c-5532-4921-a69a-54d51e66549e"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="89" height="20" uuid="b55a48f6-e9db-47c1-8b4b-612b1ee1b6d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="0" width="89" height="20" uuid="705899f2-c2e3-43b9-a67c-98bff4aa1fdc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_Full_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="89" height="20" uuid="51e9228a-6d98-4f16-82d3-c929da485425"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_contact_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="267" y="0" width="89" height="20" uuid="8535c59f-29ab-4b61-8773-9bd563e4c187"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_pickup_point}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="0" width="89" height="20" uuid="bf1db8a8-cf45-48cd-955b-b40e784e4266"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_drop_point}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="89" height="20" uuid="b6362e0f-402a-464c-85be-41a942602066"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_booking_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="534" y="0" width="89" height="20" uuid="7ebe2f09-65a8-43bf-8efb-c8398b76da8d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_booking_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="0" width="89" height="20" uuid="0dd909c5-f963-4574-a296-fad19e1004c9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_pakage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="712" y="0" width="89" height="20" uuid="a0f21a43-89a8-40a9-9b96-4c60635d181c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_user_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="19" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

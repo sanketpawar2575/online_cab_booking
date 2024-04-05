@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="User _Payment_Report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad0fc5e1-617c-4eb9-9540-d28613bd755e">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     user_payment.`id` AS user_payment_id,
+     user_payment.`Amount` AS user_payment_Amount,
+     user_payment.`Full_name` AS user_payment_Full_name,
+     user_payment.`Email` AS user_payment_Email,
+     user_payment.`contact_no` AS user_payment_contact_no,
+     user_payment.`user_id` AS user_payment_user_id
+FROM
+     `user_payment` user_payment]]>
+	</queryString>
+	<field name="user_payment_id" class="java.lang.Integer"/>
+	<field name="user_payment_Amount" class="java.lang.String"/>
+	<field name="user_payment_Full_name" class="java.lang.String"/>
+	<field name="user_payment_Email" class="java.lang.String"/>
+	<field name="user_payment_contact_no" class="java.lang.String"/>
+	<field name="user_payment_user_id" class="java.lang.String"/>
+	<group name="user_payment_id">
+		<groupExpression><![CDATA[$F{user_payment_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement x="219" y="12" width="359" height="59" uuid="f080ec3f-37d5-4260-9725-5630e761b9db"/>
+				<textElement>
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Online Cab Booking]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="81" width="255" height="38" uuid="ef5ec73a-2bf6-43f8-a567-44a9d7fd681f"/>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Payment  List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="19" width="802" height="1" uuid="251e5506-bfd2-41a1-9073-bc51d315b528"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="133" height="20" uuid="42f19b5d-1dd5-4d22-b950-2c82e5f9353f"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="133" height="20" uuid="e514ec82-1582-4157-8794-9a79c6499e3a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="0" width="133" height="20" uuid="d7d1a05a-4a88-4672-97ed-cd1e628f236c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="133" height="20" uuid="ad677e2c-c636-466f-82e3-7dba28695b1d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="0" width="133" height="20" uuid="7349e972-6770-4b4f-bd93-b374719702ff"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="665" y="0" width="133" height="20" uuid="232fb1cb-9859-430a-8c80-faee009d67c9"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User ID]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="33" width="802" height="1" uuid="4b206ae1-02b2-4da9-a1f2-278a8a1caf79"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="133" height="20" uuid="9824d181-470f-4fc5-8d01-ae53b57daf9c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_payment_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="133" height="20" uuid="65a34c19-2e82-4337-8cfe-82f3439b06c7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_payment_Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="0" width="133" height="20" uuid="2fbd6c69-6e11-464e-ad07-12c798ac9b8a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_payment_Full_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="133" height="20" uuid="b522da23-fe47-48ac-a7fb-134387c7e781"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_payment_Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="532" y="0" width="133" height="20" uuid="e26ef68d-a2e5-4bc9-9567-65cd0ab1507a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_payment_contact_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="665" y="0" width="133" height="20" uuid="e23df40e-baf4-4fbd-8408-48f524ea4ca4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_payment_user_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

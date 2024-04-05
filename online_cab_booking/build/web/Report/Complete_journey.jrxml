@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Complete_journey" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="69ea419f-69e2-4278-8835-87e27a0a99ee">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     user_cab_booking.`Full_name` AS user_cab_booking_Full_name,
+     user_cab_booking.`contact_no` AS user_cab_booking_contact_no,
+     user_cab_booking.`pickup_point` AS user_cab_booking_pickup_point,
+     user_cab_booking.`drop_point` AS user_cab_booking_drop_point,
+     user_cab_booking.`kilo_meter` AS user_cab_booking_kilo_meter,
+     user_cab_booking.`booking_date` AS user_cab_booking_booking_date,
+     user_cab_booking.`booking_time` AS user_cab_booking_booking_time,
+     user_cab_booking.`driver_name` AS user_cab_booking_driver_name,
+     user_cab_booking.`status` AS user_cab_booking_status,
+     user_cab_booking.`driver_contact` AS user_cab_booking_driver_contact,
+     user_cab_booking.`cab_no` AS user_cab_booking_cab_no,
+     user_cab_booking.`cab_type` AS user_cab_booking_cab_type
+FROM
+     `user_cab_booking` user_cab_booking
+where status="Completed"]]>
+	</queryString>
+	<field name="user_cab_booking_Full_name" class="java.lang.String"/>
+	<field name="user_cab_booking_contact_no" class="java.lang.String"/>
+	<field name="user_cab_booking_pickup_point" class="java.lang.String"/>
+	<field name="user_cab_booking_drop_point" class="java.lang.String"/>
+	<field name="user_cab_booking_kilo_meter" class="java.lang.String"/>
+	<field name="user_cab_booking_booking_date" class="java.lang.String"/>
+	<field name="user_cab_booking_booking_time" class="java.lang.String"/>
+	<field name="user_cab_booking_driver_name" class="java.lang.String"/>
+	<field name="user_cab_booking_status" class="java.lang.String"/>
+	<field name="user_cab_booking_driver_contact" class="java.lang.String"/>
+	<field name="user_cab_booking_cab_no" class="java.lang.String"/>
+	<field name="user_cab_booking_cab_type" class="java.lang.String"/>
+	<group name="user_cab_booking_Full_name">
+		<groupExpression><![CDATA[$F{user_cab_booking_Full_name}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="247" y="58" width="231" height="35" uuid="aff7b820-4d10-4b8a-bdd6-a08ec5207624"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pending Journeys]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="686" y="59" width="100" height="20" uuid="8b521527-180f-450f-8488-b2774688033f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="181" y="10" width="350" height="48" uuid="059c7d94-5cc2-4943-a32b-1c6b0a9a8e25"/>
+				<textElement>
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Online Cab Booking]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="21" width="802" height="1" uuid="fc0e732e-7a9b-4820-b60e-637fbb16a89f"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="115" height="20" uuid="c119a850-9e66-4bab-88fb-f8afcccc0efb"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="54" height="20" uuid="f318fc51-8952-483a-ad30-35d31ab72470"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="66" height="20" uuid="9c104d0c-c2eb-46d7-bc9d-0de4ccf565d3"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pickup Point]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="0" width="57" height="20" uuid="fc22f647-82f5-4753-ae96-e0734f0b88bf"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Drop Point]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="0" width="33" height="20" uuid="1a81d6fc-f5e8-46a7-b655-2ab11d4d4d21"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="0" width="66" height="20" uuid="f1b0f77c-06a1-4b77-981d-f85c360089bc"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="0" width="54" height="20" uuid="01471c7e-dd50-4539-b477-40dcd25387f9"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="0" width="111" height="20" uuid="48f9118d-40e4-40ad-864c-613e7db93afb"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Driver_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="759" y="0" width="43" height="20" uuid="7a6b7ec9-dc51-439b-bca4-242298d1f0c8"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="578" y="0" width="79" height="20" uuid="29b30676-d7f4-4c2c-b9cb-a4cc897d8ba3"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Driver_Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="657" y="0" width="50" height="20" uuid="5c4c7fcd-c296-47a2-b02b-852f40a15f80"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cab_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="707" y="0" width="52" height="20" uuid="1c5dda76-c062-4e51-8975-d0357e2016b0"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cab_type]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="46" width="802" height="1" uuid="fe17509c-3dd2-4340-a0a0-169aa7594528"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="115" height="20" uuid="0d907fc4-79b1-45f8-9cc6-98e9ff1451f9"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_Full_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="0" width="54" height="20" uuid="2be4578a-9506-41ee-b7d0-e2eeb42a669d"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_contact_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="181" y="0" width="66" height="20" uuid="04bb0fbd-8319-4037-8962-54df63b8dc4b"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_pickup_point}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="0" width="57" height="20" uuid="1ad0bfa2-6b85-42f3-a566-354c34b54f3d"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_drop_point}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="0" width="32" height="20" uuid="f58e50c0-d9c8-40f3-bb54-c8327487f0ee"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_kilo_meter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="66" height="20" uuid="64b66e5a-3a1a-497d-bcd4-da38289c3323"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_booking_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="0" width="54" height="20" uuid="919dd0ad-59d9-430c-83e2-d4e10a614bcf"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_booking_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="0" width="111" height="20" uuid="c8af8a45-8ea7-4d7e-8d88-f621d9df84ad"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_driver_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="707" y="0" width="52" height="20" uuid="8cbcd3e7-eae2-412a-ba3b-fb45dd63d6d6"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_cab_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="759" y="0" width="43" height="20" uuid="31d4b81e-453f-497f-863a-3e32dbec039e"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="578" y="0" width="79" height="20" uuid="0f69f109-7a16-477e-bb9e-8c6168a63e88"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_driver_contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="657" y="0" width="50" height="20" uuid="64116ea0-5457-4ac9-9c21-ac4e88436503"/>
+				<textFieldExpression><![CDATA[$F{user_cab_booking_cab_no}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="36" width="802" height="1" uuid="265d4c61-8e40-404b-84b9-483d9b4a7a86"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
